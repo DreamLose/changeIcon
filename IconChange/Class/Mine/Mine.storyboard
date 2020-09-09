@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="vG5-dr-Viv">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--我的-->
+        <scene sceneID="3ea-Bc-hp2">
+            <objects>
+                <navigationController id="vG5-dr-Viv" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="我的" image="tab_mine_normal" selectedImage="tab_mine_active" id="lYR-bt-RhW"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="WLG-Oo-ePv">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="4bN-Vd-G8j" kind="relationship" relationship="rootViewController" id="Y7s-6S-n69"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cgq-AX-4Qz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-652" y="186"/>
+        </scene>
+        <!--我的-->
+        <scene sceneID="cWx-wO-Y3F">
+            <objects>
+                <viewController id="4bN-Vd-G8j" customClass="MineController" customModule="换图标" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Um2-Qk-Gl7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LpY-zL-Wk9">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="4bN-Vd-G8j" id="GhV-qJ-0Jb"/>
+                                    <outlet property="delegate" destination="4bN-Vd-G8j" id="PNI-Sg-9Vw"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.97254901960784312" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="k4R-wy-VQC" firstAttribute="bottom" secondItem="LpY-zL-Wk9" secondAttribute="bottom" id="1M9-Z6-8Qv"/>
+                            <constraint firstItem="LpY-zL-Wk9" firstAttribute="leading" secondItem="k4R-wy-VQC" secondAttribute="leading" id="734-CO-hih"/>
+                            <constraint firstItem="k4R-wy-VQC" firstAttribute="trailing" secondItem="LpY-zL-Wk9" secondAttribute="trailing" id="STC-2w-uFG"/>
+                            <constraint firstItem="LpY-zL-Wk9" firstAttribute="top" secondItem="k4R-wy-VQC" secondAttribute="top" id="aMG-7R-hTg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="k4R-wy-VQC"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="我的" id="kDN-ve-JaM"/>
+                    <connections>
+                        <outlet property="tableView" destination="LpY-zL-Wk9" id="bjX-WP-pwT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Moc-LQ-8hV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="173" y="149"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_mine_active" width="24" height="24"/>
+        <image name="tab_mine_normal" width="24" height="24"/>
+    </resources>
+</document>

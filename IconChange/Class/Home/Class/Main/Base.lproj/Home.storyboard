@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hf0-57-Rnn">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--主页-->
+        <scene sceneID="gDg-2d-skS">
+            <objects>
+                <tableViewController id="zK5-e0-ReJ" customClass="HomeController" customModule="换图标" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="ibi-wE-YoA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.96862745098039216" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
+                        <connections>
+                            <outlet property="dataSource" destination="zK5-e0-ReJ" id="Bbt-ek-ody"/>
+                            <outlet property="delegate" destination="zK5-e0-ReJ" id="1Hw-hK-OW5"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="主页" id="Qpc-3Q-CZw"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zgo-Pn-otu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-80" y="-293"/>
+        </scene>
+        <!--首页-->
+        <scene sceneID="94r-N4-vp5">
+            <objects>
+                <navigationController id="hf0-57-Rnn" customClass="BaseNavController" customModule="换图标" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="首页" image="tab_home_normal" selectedImage="tab_home_active" id="vBo-ix-iql"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Y5D-QN-EPN">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zK5-e0-ReJ" kind="relationship" relationship="rootViewController" id="FpQ-eh-JIB"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xy-wh-li3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-957" y="-283"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_home_active" width="24" height="24"/>
+        <image name="tab_home_normal" width="24" height="24"/>
+    </resources>
+</document>

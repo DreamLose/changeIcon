@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="154" id="KGk-i7-Jjw" customClass="HomeAddNameCell" customModule="换图标" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="154"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="393" height="154"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="图标名称设置" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XEN-dv-R7B">
+                        <rect key="frame" x="20" y="10" width="104" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="(可选)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qqI-mg-j7D">
+                        <rect key="frame" x="20" y="41" width="353" height="50"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="h7I-up-aGW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="RVG-e2-kRU"/>
+                        </connections>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4gz-UW-qeV">
+                        <rect key="frame" x="333" y="55" width="20" height="22"/>
+                        <state key="normal" image="ic_btn_main_reset"/>
+                        <connections>
+                            <action selector="clearBtnClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Wa3-pc-9xJ"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wcg-sa-5kP">
+                        <rect key="frame" x="20" y="94" width="353" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="C0o-oc-fGj"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                        <state key="normal" title="确定替换">
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                        <connections>
+                            <action selector="clickChange:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cYd-fO-hKX"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="XEN-dv-R7B" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="7nH-2d-Hjr"/>
+                    <constraint firstItem="Wcg-sa-5kP" firstAttribute="leading" secondItem="qqI-mg-j7D" secondAttribute="leading" id="Lqg-o8-WAD"/>
+                    <constraint firstItem="qqI-mg-j7D" firstAttribute="top" secondItem="XEN-dv-R7B" secondAttribute="bottom" constant="10" id="PMA-Oj-qqt"/>
+                    <constraint firstAttribute="trailing" secondItem="qqI-mg-j7D" secondAttribute="trailing" constant="20" id="T8a-TO-gmx"/>
+                    <constraint firstItem="4gz-UW-qeV" firstAttribute="centerY" secondItem="qqI-mg-j7D" secondAttribute="centerY" id="gIl-td-zDV"/>
+                    <constraint firstItem="qqI-mg-j7D" firstAttribute="leading" secondItem="XEN-dv-R7B" secondAttribute="leading" id="i5Z-3L-77X"/>
+                    <constraint firstItem="4gz-UW-qeV" firstAttribute="trailing" secondItem="qqI-mg-j7D" secondAttribute="trailing" constant="-20" id="jtm-ta-qaO"/>
+                    <constraint firstAttribute="bottom" secondItem="Wcg-sa-5kP" secondAttribute="bottom" constant="10" id="sUI-qx-Ing"/>
+                    <constraint firstItem="XEN-dv-R7B" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="uCX-xU-3Z9"/>
+                    <constraint firstItem="Wcg-sa-5kP" firstAttribute="trailing" secondItem="qqI-mg-j7D" secondAttribute="trailing" id="wDI-aM-OJW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="changeBtn" destination="Wcg-sa-5kP" id="s34-Pf-RH2"/>
+                <outlet property="clearBtn" destination="4gz-UW-qeV" id="c5b-AW-0MP"/>
+                <outlet property="textField" destination="qqI-mg-j7D" id="Pwp-G6-myG"/>
+            </connections>
+            <point key="canvasLocation" x="78.985507246376812" y="31.473214285714285"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="ic_btn_main_reset" width="20" height="20"/>
+    </resources>
+</document>
